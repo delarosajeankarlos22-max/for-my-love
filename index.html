@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Bouquet for You</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1: LOCKSCREEN -->
+  <div id="lockscreen" class="screen">
+    <div class="lock-container">
+      <div class="lock-icon">🔒</div>
+      <p class="to-from">From: Tu Nombre<br>For: Su Nombre</p>
+      
+      <div class="pin-display">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <div class="keypad">
+        <button onclick="pressKey('1')">1</button>
+        <button onclick="pressKey('2')">2</button>
+        <button onclick="pressKey('3')">3</button>
+        <button onclick="pressKey('4')">4</button>
+        <button onclick="pressKey('5')">5</button>
+        <button onclick="pressKey('6')">6</button>
+        <button onclick="pressKey('7')">7</button>
+        <button onclick="pressKey('8')">8</button>
+        <button onclick="pressKey('9')">9</button>
+        <button onclick="clearPin()">C</button>
+        <button onclick="pressKey('0')">0</button>
+        <button onclick="checkPin()">🔓</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: CONTENIDO INTERACTIVO -->
+  <div id="content" class="screen hidden">
+    <!-- Fondo Animado de Flores -->
+    <div class="flower-bg">
+      <div class="flower">🌼</div>
+      <div class="flower">🌸</div>
+      <div class="flower">🌻</div>
+    </div>
+
+    <!-- Secciones Interactivas -->
+    <div class="card-container">
+      <div class="note-card">
+        <h2>Favorite Person ➔</h2>
+        <!-- Reproductor de Spotify integrado (cambia el link por tu canción) -->
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7iN11B4MoM31C2942ES341?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+      <div class="photo-collage">
+        <img src="tu-foto-1.jpg" alt="Nosotros 1" class="polaroid">
+        <img src="tu-foto-2.jpg" alt="Nosotros 2" class="polaroid">
+      </div>
+
+      <div class="message-card">
+        <p>Apareces en mis mejores días. Gracias por ser mi persona favorita. ❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
